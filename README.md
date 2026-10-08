@@ -4,7 +4,7 @@
 
 ## 在线预览
 
-打开 `index.html` 即可浏览，无需安装依赖或启动构建工具。
+[打开网站](https://spidermanbaout.github.io/ai-top10-cn/)（GitHub Pages）。本地也可以直接打开 `index.html`，无需安装依赖或启动构建工具。
 
 ## 榜单口径
 
