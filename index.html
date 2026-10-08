@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="根据 Arena 社区盲测投票整理的 AI Agent 排名前十，附中文介绍、得分和官方入口。">
+  <title>AI 榜单 · 十个值得认识的 AI Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="AI 榜单首页"><span class="brand-mark">A<span>I</span></span><span>观察站</span></a>
+      <nav><a href="#rankings">榜单</a><a href="#method">排名说明</a><a href="https://arena.ai/leaderboard" target="_blank" rel="noreferrer">数据来源 ↗</a></nav>
+      <a class="github-link" href="https://github.com/" target="_blank" rel="noreferrer"><span class="github-dot"></span>开源项目</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="live-dot"></span> 人类偏好 · 实时竞技场榜单</div>
+          <h1>十个值得认识的<br><em>AI Agent</em></h1>
+          <p class="hero-intro">把榜单上的模型讲清楚：它们是谁、擅长什么，以及从哪里开始体验。</p>
+          <div class="hero-meta"><span class="meta-icon">↗</span><span>排名口径：Arena「Best Overall Agents」</span><span class="meta-separator">/</span><span>更新于 2026.10.08</span></div>
+        </div>
+        <div class="hero-art" aria-label="抽象 AI 网络图示">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+          <div class="hero-core"><span>AI</span><small>AGENTS<br>INDEX</small></div>
+          <span class="orbit-label label-top">HUMAN SIGNAL</span><span class="orbit-label label-bottom">10 MODELS / 03 LABS</span>
+          <span class="spark spark-one">✳</span><span class="spark spark-two">✦</span>
+        </div>
+        <div class="hero-foot"><span>01 — 10</span><span class="scroll-hint">向下探索 <b>↓</b></span><span>CURATED FOR CURIOSITY</span></div>
+      </section>
+
+      <section class="rank-section" id="rankings">
+        <div class="section-heading">
+          <div><div class="eyebrow muted">THE CURRENT LINEUP</div><h2>当前人气前十</h2></div>
+          <div class="ranking-note"><span class="ranking-icon">↗</span><span>真实用户盲测投票<br><b>每次排名都有出处</b></span></div>
+        </div>
+        <div class="toolbar">
+          <label class="search-box"><span>⌕</span><input id="search" type="search" placeholder="搜索模型或厂商…" aria-label="搜索模型或厂商"></label>
+          <div class="filters" role="group" aria-label="按厂商筛选">
+            <button class="filter active" data-filter="all">全部 <span>10</span></button>
+            <button class="filter" data-filter="Anthropic">Anthropic</button>
+            <button class="filter" data-filter="OpenAI">OpenAI</button>
+            <button class="filter" data-filter="Google">Google</button>
+          </div>
+        </div>
+        <div class="ranking-head"><span>名次</span><span>模型 / 厂商</span><span>用户偏好指数</span><span>了解更多</span></div>
+        <div id="model-list" class="model-list" aria-live="polite"></div>
+        <p id="empty-state" class="empty-state" hidden>没有找到匹配的模型，试试其他关键词。</p>
+        <div class="source-strip"><span class="source-symbol">↗</span><span><b>这份榜单不代表“所有 AI 的绝对实力”。</b>它反映 Arena 用户在盲测对比中的偏好；排名会随新投票变化。</span><a href="https://arena.ai/leaderboard?tab=agent" target="_blank" rel="noreferrer">查看官方榜单 <span>↗</span></a></div>
+      </section>
+
+      <section class="method" id="method">
+        <div class="method-number">01 / HOW IT WORKS</div>
+        <div class="method-content"><div class="eyebrow muted">先看懂排名</div><h2>不是实验室打分，<br>是用户的真实选择。</h2><p>Arena 会让用户匿名比较两个模型的回答，再收集“哪一个更好”的投票。官方用 Bradley–Terry 统计方法汇总对战结果。它更接近大众使用体验，也会受到题目类型、用户偏好和投票量影响。</p><a class="text-link" href="https://arena.ai/how-it-works" target="_blank" rel="noreferrer">阅读 Arena 排名方法 <span>↗</span></a></div>
+        <div class="method-side"><div class="method-stat"><span>01</span><div><b>匿名对战</b><small>减少品牌先入为主</small></div></div><div class="method-stat"><span>02</span><div><b>用户投票</b><small>回答更合心意的一方获胜</small></div></div><div class="method-stat"><span>03</span><div><b>统计排名</b><small>不断吸收新对局结果</small></div></div><div class="method-caveat">榜单是选模型的起点。不同任务、价格和语言下，适合你的 AI 可能不同。</div></div>
+      </section>
+    </main>
+
+    <footer><a class="brand" href="#top"><span class="brand-mark">A<span>I</span></span><span>观察站</span></a><span>独立整理 · 榜单归 Arena 所有</span><span>排名数据快照：2026.10.08</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
